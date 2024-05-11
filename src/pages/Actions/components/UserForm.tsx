@@ -16,6 +16,11 @@ export default function UserForm() {
     setUsers((prev) => [...prev, { name, email } as IUsers])
   }
 
+  function handleCleanUsers(): void{
+    setUsers([])
+    console.log('limpou form');
+  }
+
   return (
     <>
       <div>
@@ -26,11 +31,20 @@ export default function UserForm() {
           <div>
             <input type='email' name='email' placeholder='Type the e-mail'/>
           </div>
-          <button type='submit'>Send</button>
+          <div>
+            <div>
+              <button type='submit'>Send</button>
+              <button type='reset'>Clear</button>
+            </div>
+          </div>
+
         </form>
-        <h3>Users</h3>
+        <h2>Users</h2>
+          <button type='button' onClick={handleCleanUsers}>Clear List</button>
+          <div>
+          </div>
         <ul>
-          {users.map((user, index) => (
+          {users.map((user: IUsers, index: number) => (
             <li key={index}> {user.name} - {user.email}</li>
           ))}
         </ul>
@@ -38,3 +52,6 @@ export default function UserForm() {
     </>
   )
 }
+
+// On form we don't need more use prevent default, manipulating states, onSubmit, onChange...
+// More simple
