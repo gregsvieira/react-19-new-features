@@ -33,7 +33,7 @@ const FormMessage = ({ messages, sendMessage }: {messages: IMessages[], sendMess
         </div>
       ))}
     </div>
-    <div style={{display: 'inline-flex', flexDirection: 'column'}}>
+    <div style={{display: 'inline-flex', flexDirection: 'column', }}>
       <form action={formAction}>
         <input type='text' name='message' placeholder='Type something' />
         <button type='submit'>Send</button>
