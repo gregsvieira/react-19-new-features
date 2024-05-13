@@ -42,7 +42,7 @@ const FormState = () => {
 
   };
 
-  const [message, formAction] = useFormState(validateUser, null);
+  const [message, formAction] = useFormState(validateUser, { text: 'Send to register'} );
 
   return (
     <form action={formAction}>
