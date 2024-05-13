@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import './App.css'
-import Routes from './Routes';
+import Routes, { pageList } from './Routes';
 import { ThemeProvider } from './context/ThemeContext';
+import reactIcon from './assets/react-19-logo.png';
 
 function App() {
   const [page, setPage] = useState<string>('');
@@ -11,6 +12,7 @@ function App() {
   };
 
   const pageSeted = page ? true : false;
+  const pages = Object.keys(pageList);
 
   return (
     <>
@@ -19,48 +21,18 @@ function App() {
         <title>Home</title>
         <meta name='description' content='Homepage' />
       </div>
+        <img src={reactIcon} alt="React Logo" width="300 " height="235" className='logo' />
       <div>
           {
             pageSeted ?
-            <Routes page={page} />
-            :
-              <ul>
-                <li>
-                  <a href="#" onClick={() => handlePageClick('actions')}>
-                    Actions
-                  </a>
-                </li>
-                <li>
-                  <a href="#" onClick={() => handlePageClick('refasprops')}>
-                    Ref As Props
-                  </a>
-                </li>
-                <li>
-                  <a href="#" onClick={() => handlePageClick('usetoloaddata')}>
-                    Use - to load data
-                  </a>
-                </li>
-                <li>
-                  <a href="#" onClick={() => handlePageClick('usetocontext')}>
-                    Use - to context
-                  </a>
-                </li>
-                <li>
-                  <a href="#" onClick={() => handlePageClick('useformstatus')}>
-                    UseFormStatus
-                  </a>
-                </li>
-                <li>
-                  <a href="#" onClick={() => handlePageClick('useformstate')}>
-                    UseFormState
-                  </a>
-                </li>
-                <li>
-                  <a href="#" onClick={() => handlePageClick('useoptimistic')}>
-                  UseOptimistic
-                  </a>
-                </li>
-              </ul>
+            <Routes page={page} /> : 
+            pages.map((pageName) => (
+              <div key={pageName}>
+                <button onClick={() => handlePageClick(pageName)} className='pageList'>
+                  {pageName}
+                </button>
+              </div>
+            ))
           }
       </div>
       </ThemeProvider>

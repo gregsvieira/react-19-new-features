@@ -1,5 +1,5 @@
 import Actions from './pages/Actions';
-import RefAsProps from './pages/RefAsProps';
+import RefAsAProps from './pages/RefAsAProps';
 import UseToLoadData from './pages/UseToLoadData';
 import UseToContext from './pages/UseToContext';
 import UseFormStatus from './pages/UseFormStatus';
@@ -11,13 +11,13 @@ interface pageList {
 }
 
 export const pageList: pageList = {
-  'actions': <Actions />,
-  'refasprops' : <RefAsProps />,
-  'usetoloaddata': <UseToLoadData />,
-  'usetocontext': <UseToContext />,
-  'useformstatus': <UseFormStatus />,
-  'useformstate': <UseFormState />,
-  'useoptimistic': <UseOptimistic />,
+  'Actions': <Actions />,
+  'Ref as a props' : <RefAsAProps />,
+  'Use to load data': <UseToLoadData />,
+  'Use to context': <UseToContext />,
+  'UseFormStatus': <UseFormStatus />,
+  'UseFormState': <UseFormState />,
+  'UseOptimistic': <UseOptimistic />,
 };
 
 export default function Routes({ page }: { page: string }) {
