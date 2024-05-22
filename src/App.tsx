@@ -36,6 +36,14 @@ function App() {
           }
       </div>
       </ThemeProvider>
+      <div style={{ marginTop: 200}}>
+        <a href='https://github.com/gregsvieira'>
+          <div style={{ width: '100%'}}>
+          <img style={{borderRadius: '50%', objectFit: 'cover' }}  width={50} height={50} src='https://avatars.githubusercontent.com/u/89167868?v=4'/>
+          </div>
+          </a>
+          <strong>made by gregsvieira</strong>
+      </div>
     </>
   )
 }
