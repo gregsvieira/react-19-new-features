@@ -10,7 +10,7 @@ export default function Actions() {
         <meta name='description' content='Add new users' />
       </div>
       <div>
-        <h1> 1 - Actions</h1>
+        <h1>Actions</h1>
         <UserForm />
       </div>
     </>
