@@ -9,7 +9,7 @@ export default function UseToLoadData() {
         <meta name='description' content='Use - using new hook to load data' />
       </div>
       <div>
-        <h1> 3 - Use to load data</h1>
+        <h1> Use to load data </h1>
         <PostItems />
       </div>
     </>

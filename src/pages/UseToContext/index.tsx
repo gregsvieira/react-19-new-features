@@ -9,7 +9,7 @@ export default function UseToContext() {
         <meta name='description' content='Use - using to context' />
       </div>
       <div>
-        <h1> 4 - Use to context</h1>
+        <h1> Use to context</h1>
         <ThemeButton />
       </div>
     </>
