@@ -5,6 +5,7 @@ import UseToContext from './pages/UseToContext';
 import UseFormStatus from './pages/UseFormStatus';
 import UseFormState from './pages/UseFormState';
 import UseOptimistic from './pages/UseOptimistic';
+import Metatags from './pages/Metatags';
 
 interface pageList {
   [key: string]: JSX.Element;
@@ -18,6 +19,7 @@ export const pageList: pageList = {
   'UseFormStatus': <UseFormStatus />,
   'UseFormState': <UseFormState />,
   'UseOptimistic': <UseOptimistic />,
+  'Metatags': <Metatags />,
 };
 
 export default function Routes({ page }: { page: string }) {
