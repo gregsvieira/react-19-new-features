@@ -5,11 +5,11 @@ export default function RefAsProps() {
   return (
     <>
       <div>
-        <title>Ref as Props</title>
+        <title>Ref as a Props</title>
         <meta name='description' content='Passing ref as props' />
       </div>
       <div>
-        <h1> 2 - RefProps</h1>
+        <h1>Ref As A Props</h1>
         <ParentComponent />
       </div>
     </>
