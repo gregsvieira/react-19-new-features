@@ -1,3 +1,5 @@
+'use server'
+
 import Actions from './pages/Actions';
 import RefAsAProps from './pages/RefAsAProps';
 import UseToLoadData from './pages/UseToLoadData';
@@ -6,6 +8,7 @@ import UseFormStatus from './pages/UseFormStatus';
 import UseFormState from './pages/UseFormState';
 import UseOptimistic from './pages/UseOptimistic';
 import Metatags from './pages/Metatags';
+import ServerPage from './pages/ServerPage';
 
 interface pageList {
   [key: string]: JSX.Element;
@@ -20,6 +23,7 @@ export const pageList: pageList = {
   'UseFormState': <UseFormState />,
   'UseOptimistic': <UseOptimistic />,
   'Metatags': <Metatags />,
+  'ServerPage': <ServerPage />,
 };
 
 export default function Routes({ page }: { page: string }) {
@@ -36,4 +40,4 @@ export default function Routes({ page }: { page: string }) {
   );
 }
 
-// manual routes because React Canary/19 doesn't have routing yet
+// manual routes because React Router to Canary/19 doesn't ready yet
