@@ -1,6 +1,14 @@
 import { ReactNode, createContext, useState } from "react";
 
-const ThemeContext = createContext({});
+interface ITheme {
+  theme: string;
+  toggleTheme: () => void;
+}
+
+const ThemeContext = createContext<ITheme>({
+  theme: '',
+  toggleTheme: () => null,
+});
 
 type Props = {
   children: ReactNode;
