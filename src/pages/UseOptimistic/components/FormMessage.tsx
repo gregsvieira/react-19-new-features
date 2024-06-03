@@ -3,21 +3,19 @@ import { Key, useOptimistic } from 'react';
 export interface IMessages {
   text: string;
   sending: boolean;
-  key: number;
 }
 
 const FormMessage = ({ messages, sendMessage }: {messages: IMessages[], sendMessage: Function}) => {
 
-  const [ 
-    optimisticMessages,
-    addOptimisticMessages 
-    ] = useOptimistic(
+  const [ optimisticMessages, addOptimisticMessages ] = useOptimistic(
       messages,
-      (state, newMessage: string) => [...state, { text: newMessage, sending: true }]
+      (prevMessages, newMessage: string) => [...prevMessages, { text: newMessage, sending: true }]
       );
 
   async function formAction(formData: FormData): Promise<void> {
-    addOptimisticMessages(formData.get('message'));
+    const newMessage = String(formData.get('message'));
+    
+    addOptimisticMessages(newMessage);
 
     await sendMessage(formData)
   }
