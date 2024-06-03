@@ -5,7 +5,7 @@ import FormMessage, { IMessages } from "./FormMessage";
 
 const AppMessage = () => {
   const [ messages, setMessages ] = useState<IMessages[]>([
-    {text: 'Hello, welcome to the React19', sending: false, key: 1}
+    {text: 'Hello, welcome to the React19', sending: false}
   ]);
 
   async function deliverMessage(message: string) {
@@ -25,7 +25,7 @@ const AppMessage = () => {
     
     setMessages((messages) => [
       ...messages, 
-      {text: sentMessage, sending: false, key: Math.random() }
+      {text: sentMessage, sending: false }
     ])
   }
 
