@@ -15,7 +15,3 @@ export default function UseFormStatus() {
     </>
   )
 }
-
-const makeCode: string[] = [
-`import Card from "../../components/Card";
-import FormStatus from "./components/FormStatus";`]
