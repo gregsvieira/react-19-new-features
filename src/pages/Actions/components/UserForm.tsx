@@ -8,7 +8,7 @@ interface IUsers {
 export default function UserForm() {
   const [users, setUsers] = useState<IUsers[]>([]);
 
-  async function handleAddUser(formData: FormData): Promise<void>{
+  async function addUserAction(formData: FormData): Promise<void>{
     const name = formData.get('name')
     const email = formData.get('email')
     console.log('enviou form', {name, email});
@@ -24,7 +24,7 @@ export default function UserForm() {
   return (
     <>
       <div>
-        <form action={handleAddUser}>
+        <form action={addUserAction}>
           <div>
             <input type='text' name='name' placeholder='Type the name'/>
           </div>
