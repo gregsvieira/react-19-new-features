@@ -14,7 +14,6 @@
     "babel-plugin-react-compiler": "^0.0.0-experimental-4690415-20240515",
     "eslint-plugin-react-compiler": "^0.0.0-experimental-53bb89e-20240515",
     "react": "^19.0.0-beta-6946ebe620-20240508",
-    "react-code-blocks": "^0.1.6",
     "react-dom": "^19.0.0-beta-6946ebe620-20240508"
   },
   "overrides": {
