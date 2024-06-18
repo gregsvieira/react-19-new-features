@@ -11,14 +11,14 @@ export default function UserForm() {
   async function addUserAction(formData: FormData): Promise<void>{
     const name = formData.get('name')
     const email = formData.get('email')
-    console.log('enviou form', {name, email});
+    console.log('Sended form', {name, email});
 
     setUsers((prev) => [...prev, { name, email } as IUsers])
   }
 
   function handleCleanUsers(): void{
     setUsers([])
-    console.log('limpou form');
+    console.log('Cleaned form');
   }
 
   return (
