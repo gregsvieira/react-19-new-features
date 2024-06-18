@@ -1,6 +1,4 @@
 import { use } from 'react';
-console.log(use);
-console.log(typeof use);
 import fetchNotes from './NotesServer';
 import { INotes } from '.';
 
