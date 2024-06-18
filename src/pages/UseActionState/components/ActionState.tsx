@@ -9,7 +9,7 @@ interface IPrevState {
   text: string;
 }
 
-const FormState = () => {
+const ActionState = () => {
   
   const validateUser = (prevState: IPrevState, formData: FormData): IValidateResponse => {
     console.log('prevState on form', prevState)
@@ -61,6 +61,6 @@ const FormState = () => {
   )
 }
 
-export default FormState;
+export default ActionState;
 
 // More control between front and backend
