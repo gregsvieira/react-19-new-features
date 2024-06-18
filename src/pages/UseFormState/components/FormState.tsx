@@ -1,13 +1,18 @@
-import { useFormState } from 'react-dom';
+import { useActionState } from 'react';
 
-interface validateResponse {
+interface IValidateResponse {
     success: boolean;
     text: string;
 }
 
+interface IPrevState {
+  text: string;
+}
+
 const FormState = () => {
   
-  const validateUser = (prevState: string, formData: FormData): validateResponse => {
+  const validateUser = (prevState: IPrevState, formData: FormData): IValidateResponse => {
+    console.log('prevState on form', prevState)
     const username = formData.get('username');
     const password = formData.get('password');
 
@@ -42,7 +47,7 @@ const FormState = () => {
 
   };
 
-  const [message, formAction] = useFormState(validateUser, { text: 'Send to register'} );
+  const [message, formAction] = useActionState(validateUser, { success: true, text: 'Send to register' } );
 
   return (
     <form action={formAction}>
