@@ -5,7 +5,7 @@ import RefAsAProps from './pages/RefAsAProps';
 import UseToLoadData from './pages/UseToLoadData';
 import UseToContext from './pages/UseToContext';
 import UseFormStatus from './pages/UseFormStatus';
-import UseFormState from './pages/UseFormState';
+import UseActionState from './pages/UseActionState';
 import UseOptimistic from './pages/UseOptimistic';
 import Metatags from './pages/Metatags';
 import ServerPage from './pages/ServerPage';
@@ -20,7 +20,7 @@ export const pageList: pageList = {
   'Use to load data': <UseToLoadData />,
   'Use to context': <UseToContext />,
   'UseFormStatus': <UseFormStatus />,
-  'UseFormState': <UseFormState />,
+  'useActionState': <UseActionState />,
   'UseOptimistic': <UseOptimistic />,
   'Metatags': <Metatags />,
   'ServerPage': <ServerPage />,
@@ -35,6 +35,11 @@ export default function Routes({ page }: { page: string }) {
 
   return (
     <div>
+      <div>
+        <a href='/'>
+        Home
+        </a>
+      </div>
       {renderPage()}
     </div>
   );

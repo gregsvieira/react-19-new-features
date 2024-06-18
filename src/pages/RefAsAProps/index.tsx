@@ -10,7 +10,15 @@ export default function RefAsProps() {
       </div>
       <div>
         <h1>Ref As A Props</h1>
+        <p>Ref (focus) passed as prop to children</p>
+        
         <ParentComponent />
+
+        <div>
+          <a href='https://github.com/gregsvieira/react-19-new-features/blob/main/src/pages/RefAsAProps/components/ParentComponent.tsx' target='_blank' rel='noopener noreferrer'>
+            &lt;code /&gt;
+          </a>
+        </div>
       </div>
     </>
   )
